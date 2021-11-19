@@ -1,0 +1,60 @@
+:root {
+    --main: rgb(255, 255, 255);
+    --brightText: rgb(255, 255, 255);
+    --secondaryBrightText: rgb(197, 197, 197);
+    --darkText: rgb(0, 0, 0);
+    --secondaryDarkText: rgb(130, 130, 130);
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--main);
+}
+
+nav {
+    width: 100%;
+    max-width: 2500px;
+    height: 8vmin;
+    margin: 0 auto;
+    background-color: var(--main);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    width: 60%;
+    height: 8vmin;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.flex-container>div {
+    padding: 3.25vmin 2vmin;
+    font-size: 1.5vmin;
+    color: var(--secondaryDarkText);
+    box-sizing: border-box;
+    text-transform: uppercase;
+}
+
+.flex-container>div:hover {
+    color: var(--darkText);
+    cursor: pointer;
+}
+
+.flex-container>div:first-child {
+    margin-right: auto;
+    width: 50%;
+    text-align: left;
+    padding: 1vmin 0 2vmin 0;
+    font-family: 'Syncopate', sans-serif;
+    font-size: 5vmin;
+    color: var(--text);
+    text-transform: lowercase;
+    box-sizing: border-box;
+}
