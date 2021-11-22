@@ -1,0 +1,49 @@
+@keyframes shine {
+    0% {
+        background-position-x: -50vmin
+    }
+    25% {
+        background-position-x: 50vmin
+    }
+    100% {
+        background-position-x: 50vmin
+    }
+}
+
+@keyframes fadeInUpwards {
+    from {
+        margin-top: 1vmin;
+    }
+    to {
+        opacity: 1;
+        margin-top: 0vmin;
+    }
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0vmin)
+    }
+    10%,
+    40% {
+        transform: translateY(-0.5vmin) scale(1.2)
+    }
+    50% {
+        transform: translateY(0.15vmin)
+    }
+    60% {
+        transform: translateY(-0.1vmin)
+    }
+    70% {
+        transform: translateY(0.05vmin)
+    }
+    80% {
+        transform: translateY(-0.03vmin)
+    }
+    90% {
+        transform: translateY(0.01vmin)
+    }
+    100% {
+        transform: translateY(0vmin) scale(1)
+    }
+}
