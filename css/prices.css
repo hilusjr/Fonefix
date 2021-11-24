@@ -1,0 +1,44 @@
+.prices-container {
+    height: 58vmin;
+    padding: 10vmin 0;
+    z-index: 10;
+    /* prevents parallax covering the top of the section when scrolling */
+}
+
+.prices-container h1 {
+    width: 50%;
+    margin: 0 auto 3vmin auto;
+    font-size: 5vmin;
+    height: 5vmin;
+}
+
+.prices-table {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.prices-table>div {
+    width: 46%;
+    margin: 0 1%;
+    box-sizing: border-box;
+    float: left;
+}
+
+.price-row {
+    height: 5vmin;
+    font-size: 2vmin;
+    padding: 1.5vmin 1vmin;
+    box-sizing: border-box;
+    border-bottom: 2px solid lightgray;
+}
+
+.price-label {
+    width: 80%;
+    float: left;
+}
+
+.price {
+    width: 20%;
+    float: left;
+    text-align: right;
+}
