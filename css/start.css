@@ -92,7 +92,7 @@
     color: var(--brightText);
     font-weight: 400;
     font-size: 2vmin;
-    text-align: left;
+    text-align: justify;
     opacity: 0;
     animation: slideInToBottom .4s ease-out 2.8s forwards;
 }

@@ -1,45 +1,17 @@
-const slideRightElements = document.querySelectorAll(".slide-right, .slide-left")
+const elements = document.querySelectorAll(".slide-right")
 
 const observer = new IntersectionObserver(entries => {
+
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            document.addEventListener("scroll", () => {
-                slideRightElements.forEach(element => {
-                    const direction = element.className.slice(6)
-                    let amount = window.pageYOffset - element.offsetTop / 1.15
-                    if (direction == "left") {
-                        amount *= -1
-                    }
-                    if (window.pageYOffset > element.offsetTop / 1.15) {
-                        element.style.transform = `translateX(${amount}px)`
-                    }
-                    // console.log(element.offsetTop)
-                    // console.log(window.pageYOffset)
-                    // console.log(element.getBoundingClientRect().top)
-                    // console.log(amount)
-                })
-            })
+            entry.target.style.animation = "slideInToRight .4s ease-out .4s forwards"
         } else {
-            // entry.style.marginLeft = "0"
+            entry.target.style.animation = "none"
         }
     })
+
 })
 
-slideRightElements.forEach(slideRightElement => {
-    observer.observe(slideRightElement)
+elements.forEach(element => {
+    observer.observe(element)
 })
-
-
-
-
-
-
-
-// 
-
-// document.addEventListener("scroll", () => {
-//     slideRightElements.forEach(element => {
-//         const amount = (element.offsetTop - element.getBoundingClientRect().top)
-//         element.style.paddingLeft = `${amount}px`
-//     })
-// })
