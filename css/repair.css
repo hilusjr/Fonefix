@@ -1,19 +1,38 @@
 .repair-container {
-    padding: 10vmin 0;
+    padding: 10vmax 0;
+    background: white;
 }
 
 .repair-container h1 {
-    opacity: 0;
-    width: 50%;
+    width: 80%;
     margin: 0 auto;
-    font-size: 5vmin;
-    height: 5vmin;
+    font-size: 5vmax;
+    height: 5vmax;
 }
 
 .repair-container p {
-    width: 50%;
-    margin: 5vmin auto 5vmin auto;
-    font-size: 2vmin;
+    width: 80%;
+    margin: 5vmax auto 5vmax auto;
+    font-size: 5vmin;
     text-align: justify;
     color: var(--secondaryDarkText);
+}
+
+
+/* ---------------------------------------------- FOR DESKTOP --------------------------------------------*/
+
+@media only screen and (min-width: 768px) {
+    .repair-container {
+        padding: 10vmin 0;
+    }
+    .repair-container h1 {
+        width: 50%;
+        font-size: 5vmin;
+        height: 5vmin;
+    }
+    .repair-container p {
+        width: 50%;
+        margin: 5vmin auto 5vmin auto;
+        font-size: 2vmin;
+    }
 }

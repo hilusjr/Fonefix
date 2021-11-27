@@ -10,7 +10,7 @@
 body {
     margin: 0 !important;
     padding: 0 !important;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     background-color: var(--main);
 }
 
@@ -21,18 +21,18 @@ body {
     width: 10px;
 }
 
- ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     background: #203a43;
 }
 
- ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background: hsl(0, 0%, 100%, 0.3);
     -webkit-backdrop-filter: blur(1em);
     backdrop-filter: blur(1em);
     border-radius: 5px;
 }
 
- ::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
 
@@ -42,7 +42,7 @@ body {
 nav {
     position: fixed;
     width: 100%;
-    height: 8vmin;
+    height: 8vmax;
     margin: 0 auto;
     background-color: var(--main);
     text-align: center;
@@ -53,21 +53,40 @@ nav {
 
 .flex-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: right;
     width: 100%;
     max-width: 2500px;
-    height: 8vmin;
+    height: 8vmax;
     margin: 0 auto;
     box-sizing: border-box;
 }
 
-.flex-container>div {
-    padding: 3.25vmin 2vmin;
-    font-size: 1.5vmin;
+.flex-container>div:nth-child(2),
+.flex-container>div:nth-child(3),
+.flex-container>div:nth-child(4),
+.flex-container>div:nth-child(5),
+.flex-container>div:nth-child(6) {
+    display: none;
+    font-size: 3vmax;
+    margin-top: 4vmax;
     color: var(--secondaryDarkText);
     box-sizing: border-box;
     text-transform: uppercase;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 8vmax;
+    aspect-ratio: 1;
+    padding-top: 2.5vmax;
+    box-sizing: border-box;
+}
+
+.nav-btn img {
+    height: 3vmax;
 }
 
 .flex-container>div:hover {
@@ -75,13 +94,14 @@ nav {
     cursor: pointer;
 }
 
-.flex-container>div:first-child {
+.logo {
+    display: block;
     margin-right: auto;
     width: 50%;
     text-align: left;
-    padding: 1vmin 0 2vmin 2vmin;
-    font-family: 'Syncopate', sans-serif;
-    font-size: 5vmin;
+    padding: 1vmax 0 2vmax 2vmax;
+    font-family: "Syncopate", sans-serif;
+    font-size: 5vmax;
     color: var(--text);
     text-transform: lowercase;
     box-sizing: border-box;
@@ -91,76 +111,197 @@ nav {
 /* ----------------------------------------- Footer  ------------------------------------------ */
 
 .brand-logos {
-    width: 60%;
-    height: 15vmin;
+    width: 90%;
+    height: 10vmax;
     margin: 0 auto;
 }
 
 .brand-logos p {
     width: 100%;
-    height: 3vmin;
-    font-size: 2vmin;
-    margin: 3vmin 0 0 0;
+    height: 3vmax;
+    font-size: 2vmax;
+    margin: 3vmax 0 0 0;
 }
 
 .brand-logos div {
     width: 20%;
-    height: 10vmin;
+    height: 8vmax;
     background-position: center;
     background-repeat: no-repeat;
     float: left;
 }
 
 .apple {
-    transform: translateY(-0.5vmin);
-    background-size: 3vmin;
-    background-image: url('../svg/apple.svg');
+    transform: translateY(-0.25vmax);
+    background-size: 2vmax;
+    background-image: url("../svg/apple.svg");
 }
 
 .samsung {
-    background-size: 13vmin;
-    background-image: url('../svg/samsung.svg');
+    background-size: 10vmax;
+    background-image: url("../svg/samsung.svg");
 }
 
 .xiaomi {
-    background-size: 8vmin;
-    background-image: url('../svg/xiaomi.svg');
+    background-size: 6vmax;
+    background-image: url("../svg/xiaomi.svg");
 }
 
 .oppo {
-    transform: translateY(0.25vmin);
-    background-size: 8vmin;
-    background-image: url('../svg/oppo.svg');
+    transform: translateY(0.25vmax);
+    background-size: 6vmax;
+    background-image: url("../svg/oppo.svg");
 }
 
 .vivo {
-    transform: translateY(-0.5vmin);
-    background-size: 8vmin;
-    background-image: url('../svg/vivo.svg');
+    transform: translateY(-0.25vmax);
+    background-size: 6vmax;
+    background-image: url("../svg/vivo.svg");
 }
 
 footer>p:first-of-type {
     width: 100%;
-    margin: 2vmin 0 3vmin 0;
+    margin: 2vmax 0 3vmax 0;
     text-align: center;
     font-weight: 600;
-    font-size: 2vmin;
+    font-size: 2vmax;
 }
 
 footer>div:last-child {
     width: 100%;
     text-align: center;
-    margin: 0 0 3vmin 0;
+    margin: 0 0 3vmax 0;
 }
 
 footer>div:last-child img {
-    height: 3vmin;
+    height: 3vmax;
 }
 
 footer>div:last-child img:hover {
-    animation: jump .5s ease-out;
+    animation: jump 0.5s ease-out;
 }
 
 a {
     text-decoration: none;
+}
+
+
+/* ---------------------------------------------- FOR DESKTOP --------------------------------------------*/
+
+@media only screen and (min-width: 768px) {
+    nav {
+        position: fixed;
+        width: 100%;
+        height: 8vmin;
+        margin: 0 auto;
+        background-color: var(--main);
+        text-align: center;
+        z-index: 9999;
+        box-sizing: border-box;
+        box-shadow: 5px 0 10px black;
+    }
+    .flex-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        width: 100%;
+        max-width: 2500px;
+        height: 8vmin;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+    .flex-container>div:nth-child(2),
+    .flex-container>div:nth-child(3),
+    .flex-container>div:nth-child(4),
+    .flex-container>div:nth-child(5),
+    .flex-container>div:nth-child(6) {
+        display: block;
+        margin: 0;
+        padding: 3.25vmin 2vmin;
+        font-size: 1.5vmin;
+        color: var(--secondaryDarkText);
+        box-sizing: border-box;
+        text-transform: uppercase;
+    }
+    .nav-btn {
+        display: none;
+    }
+    .flex-container>div:hover {
+        color: var(--darkText);
+        cursor: pointer;
+    }
+    .flex-container>div:first-child {
+        margin-right: auto;
+        width: 50%;
+        text-align: left;
+        padding: 1vmin 0 2vmin 2vmin;
+        font-family: "Syncopate", sans-serif;
+        font-size: 5vmin;
+        color: var(--text);
+        text-transform: lowercase;
+        box-sizing: border-box;
+    }
+    /* ----------------------------------------- Footer  ------------------------------------------ */
+    .brand-logos {
+        width: 60%;
+        height: 15vmin;
+        margin: 0 auto;
+    }
+    .brand-logos p {
+        width: 100%;
+        height: 3vmin;
+        font-size: 2vmin;
+        margin: 3vmin 0 0 0;
+    }
+    .brand-logos div {
+        width: 20%;
+        height: 10vmin;
+        background-position: center;
+        background-repeat: no-repeat;
+        float: left;
+    }
+    .apple {
+        transform: translateY(-0.5vmin);
+        background-size: 3vmin;
+        background-image: url("../svg/apple.svg");
+    }
+    .samsung {
+        background-size: 13vmin;
+        background-image: url("../svg/samsung.svg");
+    }
+    .xiaomi {
+        background-size: 8vmin;
+        background-image: url("../svg/xiaomi.svg");
+    }
+    .oppo {
+        transform: translateY(0.25vmin);
+        background-size: 8vmin;
+        background-image: url("../svg/oppo.svg");
+    }
+    .vivo {
+        transform: translateY(-0.5vmin);
+        background-size: 8vmin;
+        background-image: url("../svg/vivo.svg");
+    }
+    footer>p:first-of-type {
+        width: 100%;
+        margin: 2vmin 0 3vmin 0;
+        text-align: center;
+        font-weight: 600;
+        font-size: 2vmin;
+    }
+    footer>div:last-child {
+        width: 100%;
+        text-align: center;
+        margin: 0 0 3vmin 0;
+    }
+    footer>div:last-child img {
+        height: 3vmin;
+    }
+    footer>div:last-child img:hover {
+        animation: jump 0.5s ease-out;
+    }
+    a {
+        text-decoration: none;
+    }
 }

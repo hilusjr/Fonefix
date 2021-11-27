@@ -1,3 +1,8 @@
+.slide-right,
+.slide-down {
+    opacity: 0
+}
+
 @keyframes shine {
     0% {
         background-position-x: -50vmin
@@ -22,23 +27,23 @@
 
 @keyframes slideInToRight {
     0% {
-        opacity:0;
-        transform:translateX(-50px);
+        opacity: 0;
+        transform: translateX(-50px);
     }
     100% {
         opacity: 1;
-        transform:translateX(0);
+        transform: translateX(0);
     }
 }
 
 @keyframes slideInToBottom {
     0% {
-        opacity:0;
-        transform:translateY(-50px);
+        opacity: 0;
+        transform: translateY(-50px);
     }
     100% {
         opacity: 1;
-        transform:translateY(0);
+        transform: translateY(0);
     }
 }
 

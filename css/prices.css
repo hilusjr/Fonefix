@@ -1,19 +1,20 @@
 .prices-container {
-    height: 58vmin;
-    padding: 10vmin 0;
+    height: 58vmax;
+    padding: 10vmax 0;
     z-index: 10;
     /* prevents parallax covering the top of the section when scrolling */
 }
 
 .prices-container h1 {
-    width: 50%;
-    margin: 0 auto 3vmin auto;
-    font-size: 5vmin;
-    height: 5vmin;
+    width: 80%;
+    margin: 0 auto 3vmax auto;
+    font-size: 5vmax;
+    height: 5vmax;
+    padding-left: 0;
 }
 
 .prices-table {
-    width: 50%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -25,9 +26,9 @@
 }
 
 .price-row {
-    height: 5vmin;
-    font-size: 2vmin;
-    padding: 1.5vmin 1vmin;
+    height: 5vmax;
+    font-size: 2vmax;
+    padding: 1.5vmax 1vmax;
     box-sizing: border-box;
     border-bottom: 2px solid lightgray;
 }
@@ -41,4 +42,28 @@
     width: 20%;
     float: left;
     text-align: right;
+}
+
+
+/* ---------------------------------------------- FOR DESKTOP --------------------------------------------*/
+
+@media only screen and (min-width: 768px) {
+    .prices-container {
+        height: 58vmin;
+        padding: 10vmin 0;
+    }
+    .prices-container h1 {
+        width: 50%;
+        margin: 0 auto 3vmin auto;
+        font-size: 5vmin;
+        height: 5vmin;
+    }
+    .prices-table {
+        width: 50%;
+    }
+    .price-row {
+        height: 5vmin;
+        font-size: 2vmin;
+        padding: 1.5vmin 1vmin;
+    }
 }
